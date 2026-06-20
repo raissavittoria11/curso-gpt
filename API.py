@@ -2,7 +2,6 @@
 from flask import Flask, jsonify, request 
 from flask_cors import CORS
 
-#Criar o nosso app
 app = Flask(__name__)
 #Habilitar o CORS
 CORS(app)
@@ -23,7 +22,6 @@ produtos = [
      }
 ]
 
-#Criar uma rota
 @app.route("/listar", methods=['GET'])
 def exibirProdutos():
     return jsonify(produtos)
